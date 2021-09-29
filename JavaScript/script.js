@@ -1,76 +1,28 @@
 'use scrict';
 
-//1. Recreate the following flowcharts as loops.
-for(let a = 100; a <= 200; a++) {
-    console.log(`${a}`);
- }
-
- a = 100;
- do  {
-     if(a%2) {
-         console.log(` - `)
-     }
-     else {
-        console.log(` * `)
-     }
-     a++;
-} while (a <= 200);
+// 1. Create a IF statement that satifies the following:
+// * Declare a variable age
+// * Write a condition that checks if age is between 18 AND 65
+// * Return a value in each case where the condition is satisfied and not satisfied.
+// * Extra: Consider the case where age is less than 18 - return 'underage'.
 
 
-//2. Create a method that can print out the numbers 1-10 10 times each.
-tenTimes = function() {
-    for(let i1=1;i1<=10;i1++) {
-        for(let i2=1;i2<=10;i2++) {
-          console.log(`number: ${i2}`);
-        }    
+checkAge = function(age) {
+    if (age < 18) {
+        return 'underage';
     }
- }
-
-tenTimes();
-//3. If you have used a while loop at any point in these exercises, replace them with for loops.
-for (a = 100; a <= 200; a++) {
-    if(a%2) {
-        console.log(` - `)
+    else if (age >= 18 && age <=65) {
+        return 'adult';
     }
+    //Must be > 65
     else {
-       console.log(` * `)
+        return 'retired';
     }
 }
 
+let ageToCheck = 50;
 
-//4. Write a switch case statement which uses the current day as its expression and matches with the relevant case.
-//Criteria:
-//* Omit a break statement if it is a weekday, until the last day
-//* Use a default case to handle an invalid range.
-let d = new Date();
-let weekday = new Array(7);
-weekday[0] = "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
+console.log(`Age ${ageToCheck} is ${checkAge(ageToCheck)}`);
 
-let n = d.getDay();
-
-let day = weekday[n];
-
-console.log(`Today is ${day}.`);
-
-switch(n) {
-    case 0:
-    case 6:
-        console.log(`Today (${day}) NOT a weekday`);
-        break;
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-        console.log(`Today (${day}) is a weekday`);
-        break;
-    default:
-        console.warn(`Unregognised day: ${n}`);
-}
-
+// 2. Using ternary-if syntax, write code that checks if age is above 50.
+ ageToCheck > 50 ? console.log(`Above 50.`) : console.log(`50 or below`);
