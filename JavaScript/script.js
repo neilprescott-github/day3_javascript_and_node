@@ -1,28 +1,20 @@
 'use scrict';
+//1. Create an array with the name myArray with 2 elements hello,everyone..
+let myArray = ["hello", "everyone"];
 
-// 1. Create a IF statement that satifies the following:
-// * Declare a variable age
-// * Write a condition that checks if age is between 18 AND 65
-// * Return a value in each case where the condition is satisfied and not satisfied.
-// * Extra: Consider the case where age is less than 18 - return 'underage'.
+//2. Next print the length of the array
+console.log(`myArray has a length of ${myArray.length}`)
 
+//3. Next use the push() method to add 3 elements to the array
+myArray.push(`today`, `is`, `Wednesday`)
 
-checkAge = function(age) {
-    if (age < 18) {
-        return 'underage';
-    }
-    else if (age >= 18 && age <=65) {
-        return 'adult';
-    }
-    //Must be > 65
-    else {
-        return 'retired';
-    }
+//4. Next print the length of the array
+console.log(`myArray now has a length of ${myArray.length}`)
+
+//5. Next use shift() to remove an element
+myArray.shift();
+
+//6. Finally print the contents of the array using a for of loop.
+for (item of myArray) {
+    console.log(`${item}`);
 }
-
-let ageToCheck = 50;
-
-console.log(`Age ${ageToCheck} is ${checkAge(ageToCheck)}`);
-
-// 2. Using ternary-if syntax, write code that checks if age is above 50.
- ageToCheck > 50 ? console.log(`Above 50.`) : console.log(`50 or below`);
