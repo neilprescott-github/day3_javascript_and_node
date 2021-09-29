@@ -68,7 +68,8 @@ switch(n) {
     case 3:
     case 4:
     case 5:
-        console.log(`Today (${day}) is a weekday`)
+        console.log(`Today (${day}) is a weekday`);
+        break;
     default:
         console.warn(`Unregognised day: ${n}`);
 }
