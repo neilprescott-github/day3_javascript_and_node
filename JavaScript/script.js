@@ -1,14 +1,14 @@
-let totalMoney = 4000;
-let moneyPaidSoFar = 4000;
-let totalLeftToPay;
+ for(let a = 100; a <= 200; a++) {
+    console.log(`${a}`);
+ }
 
-totalLeftToPay = totalMoney - moneyPaidSoFar;
-
-if (totalLeftToPay > 0) {
-  effects = 'color:red;'
-}
-else {
-    effects = 'color:green;'
-}
-
-console.log(`The total bill is £${totalMoney} the remaining amount of money to be paid is %c£${totalLeftToPay}`, effects);
+ a = 100;
+ do  {
+     if(a%2) {
+         console.log(` - `)
+     }
+     else {
+        console.log(` * `)
+     }
+     a++;
+ } while (a <= 200)
